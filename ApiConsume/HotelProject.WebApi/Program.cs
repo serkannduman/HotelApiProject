@@ -30,6 +30,14 @@ namespace HotelProject.WebApi
 
             builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>(); 
             builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
+
+            builder.Services.AddCors(opt =>
+            {
+                opt.AddPolicy("OtelApiCors", opts =>
+                {
+                    opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod(); // Bir api'in baþka kaynaklar tarafýndan consume edilmesini yani tüketilmesini saðlayan method. (en alttada app.UseCors diyerek tanýttýk. )
+                });
+            });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -43,6 +51,7 @@ namespace HotelProject.WebApi
                 app.UseSwaggerUI();
             }
 
+            app.UseCors("OtelApiCors");
             app.UseAuthorization();
 
 
