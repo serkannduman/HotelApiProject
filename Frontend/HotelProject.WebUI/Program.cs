@@ -9,6 +9,8 @@ namespace HotelProject.WebUI
             // Add services to the container.
             builder.Services.AddHttpClient();
             builder.Services.AddControllersWithViews();
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 
             var app = builder.Build();
 
