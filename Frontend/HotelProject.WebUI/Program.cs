@@ -1,3 +1,6 @@
+using HotelProject.DataAccessLayer.Concrete;
+using HotelProject.EntityLayer.Concrete;
+
 namespace HotelProject.WebUI
 {
     public class Program
@@ -7,6 +10,8 @@ namespace HotelProject.WebUI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddDbContext<Context>();
+            builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<Context>();
             builder.Services.AddHttpClient();
             builder.Services.AddControllersWithViews();
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
