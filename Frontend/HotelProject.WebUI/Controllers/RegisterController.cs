@@ -32,7 +32,7 @@ namespace HotelProject.WebUI.Controllers
                 Surname = createNewUserDto.Surname,
                 UserName = createNewUserDto.UserName
             };
-            var result = await _userManager.CreateAsync(appUser,createNewUserDto.Password);
+            var result = await _userManager.CreateAsync(appUser,createNewUserDto.Password); //createAsync metodu identity kütüphanesilye yeni bir kullanıcı oluşturmak için kullanılıyor.
             if (result.Succeeded)
             {
                 return RedirectToAction("Index", "Login");
