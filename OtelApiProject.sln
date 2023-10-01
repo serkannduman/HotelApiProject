@@ -26,7 +26,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.WebUI", "Front
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidApi", "RapidApi", "{03712343-B6DA-4F13-B8A8-40C50A7593A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidApiConsume", "RapidApiConsume\RapidApiConsume\RapidApiConsume.csproj", "{1BB5D3CA-3E1C-4CE1-BF9A-82175D84E8E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidApiConsume", "RapidApiConsume\RapidApiConsume\RapidApiConsume.csproj", "{1BB5D3CA-3E1C-4CE1-BF9A-82175D84E8E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JwtProject", "JwtProject", "{2385D40C-F2C7-4F3F-BBB0-7F92E17B6A95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiJwt", "JwtProject\WebApiJwt\WebApiJwt.csproj", "{298923F6-03F1-435A-AC52-71282D059F1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +66,10 @@ Global
 		{1BB5D3CA-3E1C-4CE1-BF9A-82175D84E8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BB5D3CA-3E1C-4CE1-BF9A-82175D84E8E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BB5D3CA-3E1C-4CE1-BF9A-82175D84E8E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{298923F6-03F1-435A-AC52-71282D059F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298923F6-03F1-435A-AC52-71282D059F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298923F6-03F1-435A-AC52-71282D059F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298923F6-03F1-435A-AC52-71282D059F1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +82,7 @@ Global
 		{7721E044-5481-439F-B85E-DF488A3239EE} = {7802C8EF-4222-4009-8C91-82CC9DA9C9E6}
 		{2E098930-D579-45F4-89DE-A9513E8C1E06} = {E735336D-A448-4B29-985E-16FE85CBB376}
 		{1BB5D3CA-3E1C-4CE1-BF9A-82175D84E8E8} = {03712343-B6DA-4F13-B8A8-40C50A7593A1}
+		{298923F6-03F1-435A-AC52-71282D059F1A} = {2385D40C-F2C7-4F3F-BBB0-7F92E17B6A95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF9E52B1-7920-434F-90A8-F45D58C2E0B4}
