@@ -1,5 +1,9 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using HotelProject.DataAccessLayer.Concrete;
 using HotelProject.EntityLayer.Concrete;
+using HotelProject.WebUI.Dtos.GuestDto;
+using HotelProject.WebUI.ValidationRules.GuestValidationRules;
 
 namespace HotelProject.WebUI
 {
@@ -13,7 +17,9 @@ namespace HotelProject.WebUI
             builder.Services.AddDbContext<Context>();
             builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<Context>();
             builder.Services.AddHttpClient();
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddTransient<IValidator<CreateGuestDto>,CreateGuestValidator>(); // FLUENT VALIDATIONU GORMESI ICIN EKLEDIK (GUEST EKLEME SAYFASI ICIN )
+            builder.Services.AddTransient<IValidator<UpdateGuestDto>,UpdateGuestValidator>(); // FLUENT VALIDATIONU GORMESI ICIN EKLEDIK (GUEST EKLEME SAYFASI ICIN )
+            builder.Services.AddControllersWithViews().AddFluentValidation();
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 

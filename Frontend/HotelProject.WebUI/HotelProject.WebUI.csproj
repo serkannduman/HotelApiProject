@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ValidationRules\" />
+    <Folder Include="ValidationRules\RoomValidationRules\" />
   </ItemGroup>
 
 </Project>
