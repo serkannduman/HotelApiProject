@@ -40,6 +40,9 @@ namespace HotelProject.WebApi
             builder.Services.AddScoped<IContactDal, EfContactDal>();
             builder.Services.AddScoped<IContactService, ContactManager>();
 
+            builder.Services.AddScoped<IGuestDal, EfGuestDal>();
+            builder.Services.AddScoped<IGuestService, GuestManager>();
+
 
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
