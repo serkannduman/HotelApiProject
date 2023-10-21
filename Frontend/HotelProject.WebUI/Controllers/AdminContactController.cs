@@ -26,6 +26,7 @@ namespace HotelProject.WebUI.Controllers
                 var values = JsonConvert.DeserializeObject<List<InboxContactDto>>(jsonData);
                 return View(values);
             }
+
             return View();
         }
 
@@ -62,8 +63,11 @@ namespace HotelProject.WebUI.Controllers
             }
             return View();
         }
-        public PartialViewResult SideBarAdminContactPartial()
+        public async Task<PartialViewResult> SideBarAdminContactPartial()
         {
+            
+                
+            
             return PartialView();
         }
         public PartialViewResult SideBarAdminContactCategoryPartial()
@@ -94,5 +98,19 @@ namespace HotelProject.WebUI.Controllers
             }
             return View();
         }
+
+        //public async Task<IActionResult> GetContactCount()
+        //{
+        //    var client = _httpClientFactory.CreateClient();
+        //    var responseMessage = await client.GetAsync("http://localhost:5244/api/Contact/GetContactCount");
+        //    if (responseMessage.IsSuccessStatusCode)
+        //    {
+        //        var jsonData = await responseMessage.Content.ReadAsStringAsync();
+        //        //var values = JsonConvert.DeserializeObject<List<InboxContactDto>>(jsonData);
+        //        ViewBag.data = jsonData;
+        //        return View();
+        //    }
+        //    return View();
+        //}
     }
 }

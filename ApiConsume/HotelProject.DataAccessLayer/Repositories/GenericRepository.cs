@@ -1,4 +1,4 @@
-﻿using HotelProject.DataAccessLayer.Abstract;
+﻿ using HotelProject.DataAccessLayer.Abstract;
 using HotelProject.DataAccessLayer.Concrete;
 using System;
 using System.Collections.Generic;
