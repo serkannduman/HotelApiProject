@@ -14,8 +14,14 @@ namespace HotelProject.WebApi
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers().AddNewtonsoftJson( options => 
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore );
+
+
+
             builder.Services.AddDbContext<Context>();
+
+
             builder.Services.AddScoped<IStaffDal,EfStaffDal>(); // IStaffDal görünce EfStaffDal'ý kullan dedik.
             builder.Services.AddScoped<IStaffService,StaffManager>(); //IStaffService görünce StaffManager kullan dedik.
 
@@ -48,6 +54,12 @@ namespace HotelProject.WebApi
 
             builder.Services.AddScoped<IMessageCategoryDal, EfMessageCategoryDal>();
             builder.Services.AddScoped<IMessageCategoryService, MessageCategoryManager>();
+
+            builder.Services.AddScoped<IWorkLocationDal, EfWorkLocationDal>();
+            builder.Services.AddScoped<IWorkLocationService, WorkLocationManager>();
+
+            builder.Services.AddScoped<IAppUserDal,EfAppUserDal>();
+            builder.Services.AddScoped<IAppUserService, AppUserManager>();
 
 
 
